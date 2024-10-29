@@ -1,0 +1,100 @@
+{
+	"info": {
+		"_postman_id": "a2c40942-b9db-4ef5-aba1-dfdd371e6351",
+		"name": "obj-bank",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "7474749"
+	},
+	"item": [
+		{
+			"name": "conta",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"number\": \"234\",\n    \"balance\": \"180.37\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8181/accounts",
+					"host": [
+						"localhost"
+					],
+					"port": "8181",
+					"path": [
+						"accounts"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "transacao",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"payment_method\": \"D\",\n    \"number\": 234,\n    \"value\": 10\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8181/transactions",
+					"host": [
+						"localhost"
+					],
+					"port": "8181",
+					"path": [
+						"transactions"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "conta_numero",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"number\": \"234\",\n    \"balance\": \"180.37\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8181/account?number=234",
+					"host": [
+						"localhost"
+					],
+					"port": "8181",
+					"path": [
+						"account"
+					],
+					"query": [
+						{
+							"key": "number",
+							"value": "234"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
